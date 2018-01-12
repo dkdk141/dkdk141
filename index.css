@@ -328,7 +328,8 @@ div.overline{
 }
 .sidepage_image{
 	position: absolute;
-	height: 100%;
+	height: 105%;
+	z-index: 10;
 }
 .right-sidepage-image{
 	right: 0;
