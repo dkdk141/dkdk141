@@ -125,7 +125,7 @@ $(document).ready(function(){
 			</div> -->
 			<div class="side-page-wrapper page-1" id="oteviraci_doba-wrapper">
 				<div class="side-page-image-wrapper">
-					<img src="page-1.png" class="sidepage_image left-sidepage-image" id="img-page-1"/>
+					<img src="page-1.png" class="sidepage_image left-sidepage-image shadow" id="img-page-1"/>
 				</div>
 				<div class="side-page" id="oteviraci_doba">
 					<div class="title">
@@ -157,7 +157,8 @@ $(document).ready(function(){
 
 			<div class="side-page-wrapper page-2" id="oteviraci_doba-wrapper">
 				<div class="side-page-image-wrapper">
-					<img src="page-2.png" class="sidepage_image right-sidepage-image" id="img-page-2"/>
+					<img src="page-2.png" class="sidepage_image right-sidepage-image shadow" id="img-page-2"/>
+
 				</div>
 				<div class="side-page" id="oteviraci_doba">
 					<div class="title">
@@ -189,7 +190,8 @@ $(document).ready(function(){
 
 			<div class="side-page-wrapper page-3" id="oteviraci_doba-wrapper">
 				<div class="side-page-image-wrapper">
-					<img src="page-3.png" class="sidepage_image left-sidepage-image" id="img-page-3"/>
+					<img src="page-3.png" class="sidepage_image left-sidepage-image shadow" id="img-page-3"/>
+
 				</div>
 				<div class="side-page" id="oteviraci_doba">
 					<div class="title">
@@ -220,6 +222,29 @@ $(document).ready(function(){
 			</div>
 
 		</div>
-
+		<svg height="0" xmlns="http://www.w3.org/2000/svg">
+			<filter id="drop-shadow-right">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+					<feOffset dx="-12" dy="0" result="offsetblur"/>
+					<feFlood flood-color="rgba(0,0,0,0.3)"/>
+					<feComposite in2="offsetblur" operator="in"/>
+					<feMerge>
+							<feMergeNode/>
+							<feMergeNode in="SourceGraphic"/>
+					</feMerge>
+			</filter>
+		</svg>
+		<svg height="0" xmlns="http://www.w3.org/2000/svg">
+			<filter id="drop-shadow-left">
+					<feGaussianBlur in="SourceAlpha" stdDeviation="4"/>
+					<feOffset dx="12" dy="0" result="offsetblur"/>
+					<feFlood flood-color="rgba(0,0,0,0.3)"/>
+					<feComposite in2="offsetblur" operator="in"/>
+					<feMerge>
+							<feMergeNode/>
+							<feMergeNode in="SourceGraphic"/>
+					</feMerge>
+			</filter>
+		</svg>
 	</body>
 </html>
